@@ -1,12 +1,12 @@
-import { Rating } from "@components/Rating/Rating";
-import React, { useState } from "react";
+import { withLayout } from "layout/Layout";
+import React from "react";
 
-export default function Home(): JSX.Element {
-  const [rating, setRating] = useState<number>(4);
-
+function Home(): JSX.Element {
   return (
     <>
-      <Rating rating={rating} isEditable setRating={setRating} />
+      <p>hello from home</p>
     </>
   );
 }
+
+export default withLayout(Home);
